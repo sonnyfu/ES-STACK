@@ -1,0 +1,28 @@
+ES
+
+1 搜索
+数据及建模
+导入数据
+搭建界面
+
+2 术语
+文档（document）：存储最小单位；了类似表的一行数据
+索引：文档集合，对应一个表；类似的一个datatbase（因为多个type），6之后，一个索引一个type（甚至去除type概念）
+2.1 doc
+what：json obj；
+-字段及类型;
+-id标识：自动生成及指定；
+-元数据：数据的标注:_type同id作用一样，all禁用
+
+2.2 index
+-有mapping定义（类似sql的schema），定义字段名及类型，一个集群有多个索引；
+
+3 es倒排索引及分词
+-背景：书与es
+-目录页对应正排索引（文档id与doc，单词（doc分词之后的结果）的关系），索引页对应倒排索引（单词docid的关系），
+-正倒简介及例子
+-倒排详解：单词词典（分词结果，单词和倒排列表的关联(doc的id等信息)），倒排列表（docid等）
+-分词：
+--what:文本转token或term过程（analysis），es分词组件为analyzer（character filter（html等），tokenizer切分为单词，token filter（插，删除如stop world（没意义的“的，这，那”），该）这三个子组件）
+
+ref:入门到实践--慕课
